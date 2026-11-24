@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<!-- CSS comum (cabeçalho, menu, chat) e CSS só desta página -->
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="pagina-inicial.css">
+</head>
+<body>
+<!-- Cabeçalho, menu, rodapé e chat são criados pelo comum.js -->
+<main>
+  <section class="banner">
+    <h1>Tudo para o seu pet, com carinho</h1>
+    <p>Ração, brinquedos, higiene e muito mais para quem faz parte da família.</p>
+    <a class="botao" href="#produtos">Ver produtos</a>
+  </section>
+
+  <section class="secao" id="produtos">
+    <h2>Mais vendidos</h2>
+    <div class="grade" id="grade"></div>
+  </section>
+
+  <section class="secao cta">
+    <h2>Agende um horário</h2>
+    <p>Banho e tosa, hotelzinho ou consulta veterinária.</p>
+    <a class="botao" href="agendamentos.html">Ver agendamentos</a>
+    <a class="botao botao--claro" href="mapa.html">Pet shops perto de mim</a>
+  </section>
+</main>
+
+<script src="comum.js"></script>
+<script src="pagina-inicial.js"></script>
+</body>
+</html>

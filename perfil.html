@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu perfil | PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="loja.css">
+</head>
+<body>
+<main class="pagina">
+  <h1>Meu perfil</h1>
+  <p class="pagina__intro">Gerencie sua conta, veja seus pedidos e favoritos, ajuste a segurança ou saia da sessão.</p>
+
+  <section class="lista-loja" aria-label="Opções do perfil">
+    <article class="item-loja">
+      <div class="item-loja__info">
+        <span class="item-loja__icone" aria-hidden="true">👤</span>
+        <div>
+          <h2 class="item-loja__nome">Minha conta</h2>
+          <p class="item-loja__preco">Sessão ativa neste navegador (sem cadastro)</p>
+        </div>
+      </div>
+      <div class="item-loja__acoes">
+        <a class="botao botao--claro" href="pagina-inicial.html">Voltar ao início</a>
+      </div>
+    </article>
+
+    <article class="item-loja">
+      <div class="item-loja__info">
+        <span class="item-loja__icone" aria-hidden="true">📦</span>
+        <div>
+          <h2 class="item-loja__nome">Meus pedidos</h2>
+          <p class="item-loja__preco" id="resumoPedidos">Carregando pedidos...</p>
+        </div>
+      </div>
+      <div class="item-loja__acoes">
+        <button type="button" class="botao-secundario" id="btnVerPedidos">Ver pedidos</button>
+      </div>
+    </article>
+
+    <article class="item-loja">
+      <div class="item-loja__info">
+        <span class="item-loja__icone" aria-hidden="true">♡</span>
+        <div>
+          <h2 class="item-loja__nome">Meus favoritos</h2>
+          <p class="item-loja__preco" id="resumoFavoritos">Carregando favoritos...</p>
+        </div>
+      </div>
+      <div class="item-loja__acoes">
+        <a class="botao botao--claro" href="favoritos.html">Abrir favoritos</a>
+      </div>
+    </article>
+
+    <article class="item-loja">
+      <div class="item-loja__info">
+        <span class="item-loja__icone" aria-hidden="true">🔒</span>
+        <div>
+          <h2 class="item-loja__nome">Segurança</h2>
+          <p class="item-loja__preco">Dados salvos localmente no navegador (carrinho, favoritos e pedidos)</p>
+        </div>
+      </div>
+      <div class="item-loja__acoes">
+        <button type="button" class="botao-secundario" id="btnLimparDados">Limpar dados locais</button>
+      </div>
+    </article>
+
+    <article class="item-loja">
+      <div class="item-loja__info">
+        <span class="item-loja__icone" aria-hidden="true">🚪</span>
+        <div>
+          <h2 class="item-loja__nome">Sair</h2>
+          <p class="item-loja__preco">Encerrar visualização da conta e voltar para a página inicial</p>
+        </div>
+      </div>
+      <div class="item-loja__acoes">
+        <button type="button" class="botao" id="btnSair">Sair</button>
+      </div>
+    </article>
+  </section>
+
+  <section id="detalhesPedidos" class="resumo-loja" hidden aria-label="Lista de pedidos"></section>
+</main>
+
+<script src="comum.js"></script>
+<script src="catalogo.js"></script>
+<script src="perfil.js"></script>
+</body>
+</html>

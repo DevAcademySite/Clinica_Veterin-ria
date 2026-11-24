@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu carrinho | PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="loja.css">
+</head>
+<body>
+<main class="pagina">
+  <h1>Meu carrinho</h1>
+  <p class="pagina__intro">Confira os produtos e quantidades antes de continuar.</p>
+  <div class="acoes-loja">
+    <a class="botao botao--claro" href="pagina-inicial.html#produtos">← Voltar aos produtos</a>
+  </div>
+  <div id="itensCarrinho" class="lista-loja" aria-live="polite"></div>
+  <section id="resumoCarrinho" class="resumo-loja" hidden aria-label="Resumo do carrinho">
+    <h2>Resumo do pedido</h2>
+    <div class="resumo-loja__linha"><span>Total</span><span id="totalCarrinho"></span></div>
+    <a class="botao" href="pagamento.html">Ir para pagamento</a>
+  </section>
+</main>
+<script src="comum.js"></script>
+<script src="catalogo.js"></script>
+<script src="carrinho.js"></script>
+</body>
+</html>

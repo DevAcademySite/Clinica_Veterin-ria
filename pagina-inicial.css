@@ -1,0 +1,30 @@
+/* ===== pagina-inicial.css: só o que existe na página inicial ===== */
+.banner { padding: 48px 20px; text-align: center; background: var(--verde); color: var(--branco); }
+.banner h1 { margin: 0 0 8px; font: 800 clamp(26px, 6vw, 40px) "Baloo 2", sans-serif; }
+.banner p { margin: 0 auto 20px; max-width: 480px; }
+
+.secao { max-width: 1000px; margin: 0 auto; padding: 32px 16px 8px; }
+.secao h2 { margin: 0 0 16px; font: 800 26px "Baloo 2", sans-serif; color: var(--verde); }
+
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+.card { position: relative; display: flex; flex-direction: column; background: var(--branco); border-radius: 16px; overflow: hidden; }
+.card__foto { height: 120px; display: grid; place-items: center; font-size: 56px; background: #fff3cf; }
+.card__foto img { width: 100%; height: 100%; object-fit: cover; }
+.card__info { display: flex; flex-direction: column; gap: 8px; padding: 12px; flex: 1; }
+.card__nome { margin: 0; font-weight: 600; font-size: 15px; }
+.card__linha { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+.card__preco { margin: 0; font: 800 20px "Baloo 2", sans-serif; color: var(--verde); }
+.card__fav { position: absolute; top: 8px; right: 8px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: var(--branco); font-size: 18px; color: #d62828; cursor: pointer; }
+
+/* ----- botão + : bolinha preta, cruz branca centralizada, fica verde no hover ----- */
+.btn-mais { position: relative; width: 38px; height: 38px; border: 0; border-radius: 50%; background: var(--preto); cursor: pointer; transition: background .2s; }
+.btn-mais::before, .btn-mais::after {          /* as duas barras da cruz */
+  content: ""; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);            /* centraliza exatamente no meio do círculo */
+  background: var(--branco); border-radius: 2px;
+}
+.btn-mais::before { width: 16px; height: 3px; }   /* barra horizontal */
+.btn-mais::after  { width: 3px; height: 16px; }   /* barra vertical */
+.btn-mais:hover, .btn-mais:focus-visible { background: var(--ok); }
+
+.cta { text-align: center; padding-bottom: 8px; }

@@ -1,0 +1,34 @@
+.pagina { max-width: 1000px; margin: 0 auto; padding: 32px 16px 8px; }
+.pagina h1 { margin: 0 0 8px; font: 800 30px "Baloo 2", sans-serif; color: var(--verde); }
+.pagina__intro { margin: 0 0 20px; }
+.lista-loja { display: grid; gap: 12px; }
+.item-loja { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 16px; background: var(--branco); border-radius: 16px; }
+.item-loja__info { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.item-loja__icone { display: grid; place-items: center; flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; background: #fff3cf; font-size: 30px; }
+.item-loja__nome { margin: 0 0 4px; font-weight: 800; }
+.item-loja__preco { margin: 0; color: var(--verde); font-weight: 800; }
+.item-loja__acoes { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.controle-qtd { display: flex; align-items: center; gap: 8px; }
+.controle-qtd button, .botao-secundario { min-width: 36px; min-height: 36px; border: 1px solid var(--verde); border-radius: 10px; background: var(--branco); color: var(--verde); font: 800 16px "Nunito", sans-serif; cursor: pointer; }
+.botao-secundario { padding: 7px 12px; }
+.resumo-loja { max-width: 420px; margin: 20px 0 0 auto; padding: 18px; background: var(--branco); border-radius: 16px; }
+.resumo-loja h2 { margin: 0 0 12px; font: 800 22px "Baloo 2", sans-serif; color: var(--verde); }
+.resumo-loja__linha { display: flex; justify-content: space-between; gap: 12px; margin: 8px 0 16px; font-weight: 800; }
+.acoes-loja { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.vazio-loja { padding: 24px; text-align: center; background: var(--branco); border-radius: 16px; }
+.vazio-loja p { margin-top: 0; }
+.pagamento-form { display: grid; gap: 12px; }
+.pagamento-form[hidden] { display: none; }
+.pagamento-opcao { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: var(--branco); border: 2px solid transparent; border-radius: 14px; cursor: pointer; }
+.pagamento-opcao:has(input:checked) { border-color: var(--verde); }
+.pagamento-opcao input { margin-top: 4px; accent-color: var(--verde); }
+.pagamento-opcao strong, .pagamento-opcao small { display: block; }
+.pagamento-opcao small { margin-top: 3px; }
+.nota-simulacao { margin: 16px 0 0; padding: 12px; border-left: 4px solid var(--amarelo); background: var(--branco); }
+.sucesso-pedido { margin-top: 20px; padding: 20px; background: var(--branco); border-radius: 16px; }
+.sucesso-pedido h2 { margin-top: 0; color: var(--verde); font: 800 24px "Baloo 2", sans-serif; }
+
+@media (max-width: 560px) {
+  .item-loja { grid-template-columns: 1fr; }
+  .item-loja__acoes { justify-content: flex-start; }
+}

@@ -1,0 +1,73 @@
+/* ===== comum.css: visual que se repete em TODAS as páginas ===== */
+/* Cores em variáveis: para mudar o tema inteiro, troco só aqui */
+:root {
+  --verde: #0f5257;
+  --claro: #e3f3f3;
+  --amarelo: #ffc93c;
+  --tinta: #17292b;
+  --branco: #ffffff;
+  --preto: #111111;
+  --ok: #1e8f4e;       /* verde do hover e dos avisos de sucesso */
+  --erro: #b3261e;     /* vermelho das mensagens de erro */
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Nunito", Arial, sans-serif; color: var(--tinta); background: var(--claro); }
+main { min-height: 70vh; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+
+/* ----- cabeçalho fixo ----- */
+.topo { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--verde); color: var(--branco); border-bottom: 3px solid var(--amarelo); }
+.logo { color: var(--branco); text-decoration: none; font: 800 22px "Baloo 2", sans-serif; }
+.topo__acoes { margin-left: auto; display: flex; gap: 4px; }
+.icone { border: 0; background: transparent; color: inherit; font-size: 22px; padding: 6px 8px; cursor: pointer; }
+.badge { font: 800 12px "Nunito", sans-serif; background: var(--amarelo); color: var(--tinta); border-radius: 999px; padding: 1px 6px; }
+
+/* ----- menu lateral (hambúrguer) ----- */
+.menu { position: fixed; top: 0; left: 0; bottom: 0; z-index: 30; width: min(80%, 300px); background: var(--branco); display: flex; flex-direction: column; transform: translateX(-100%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
+.menu.aberto { transform: translateX(0); visibility: visible; }   /* visibility:hidden tira os links do foco do teclado quando fechado */
+.menu__topo { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--verde); color: var(--branco); font: 800 20px "Baloo 2", sans-serif; }
+.menu a { padding: 14px 20px; color: var(--tinta); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--claro); }
+.menu a:hover { background: var(--claro); }
+.fundo-escuro { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.fundo-escuro.aberto { opacity: 1; pointer-events: auto; }
+
+/* ----- botão padrão e rodapé ----- */
+.botao { display: inline-block; padding: 12px 24px; border: 0; border-radius: 999px; background: var(--amarelo); color: var(--tinta); font: 800 17px "Baloo 2", sans-serif; text-decoration: none; cursor: pointer; }
+.botao--claro { background: var(--branco); border: 2px solid var(--verde); color: var(--verde); }
+.rodape { margin-top: 40px; padding: 24px 16px; text-align: center; background: var(--verde); color: var(--branco); }
+
+/* ----- aviso (toast): mensagem rápida de feedback ----- */
+.aviso { position: fixed; left: 50%; bottom: 24px; z-index: 50; transform: translate(-50%, 20px); max-width: calc(100% - 32px); padding: 12px 20px; border-radius: 12px; background: var(--preto); color: var(--branco); font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+.aviso--erro { background: var(--erro); }
+.aviso.visivel { opacity: 1; transform: translate(-50%, 0); }
+
+/* ----- chatbot ----- */
+.chat-botao { position: fixed; right: 16px; bottom: 16px; z-index: 15; width: 58px; height: 58px; border: 0; border-radius: 50%; background: var(--amarelo); font-size: 28px; cursor: pointer; }
+.chat { position: fixed; right: 16px; bottom: 86px; z-index: 40; width: min(calc(100% - 32px), 380px); height: min(70vh, 560px); display: flex; flex-direction: column; background: var(--claro); border-radius: 18px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+.chat[hidden] { display: none; }
+.chat__topo { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: var(--verde); color: var(--branco); border-bottom: 3px solid var(--amarelo); }
+.chat__titulo { margin: 0; font: 800 18px "Baloo 2", sans-serif; line-height: 1.1; }
+.chat__status { margin: 0; font-size: 12px; opacity: .85; }
+.chat__fechar { margin-left: auto; font-size: 18px; }
+.mensagens { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.msg { max-width: 82%; padding: 10px 14px; border-radius: 16px; line-height: 1.4; white-space: pre-line; }
+.msg--bot { align-self: flex-start; background: var(--branco); border-bottom-left-radius: 4px; }
+.msg--usuario { align-self: flex-end; background: var(--verde); color: var(--branco); border-bottom-right-radius: 4px; }
+.digitando { display: flex; gap: 4px; }
+.digitando span { width: 7px; height: 7px; border-radius: 50%; background: var(--verde); opacity: .35; animation: pulso 1s infinite; }
+.digitando span:nth-child(2) { animation-delay: .2s; }
+.digitando span:nth-child(3) { animation-delay: .4s; }
+@keyframes pulso { 50% { opacity: 1; } }
+.atalhos { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 10px; }
+.atalhos button { border: 2px solid var(--verde); background: transparent; color: var(--verde); padding: 5px 11px; border-radius: 999px; font: 600 14px "Nunito", sans-serif; cursor: pointer; }
+.atalhos button:hover { background: var(--verde); color: var(--branco); }
+.formulario-chat { display: flex; gap: 8px; padding: 10px 14px; background: var(--branco); }
+.formulario-chat input { flex: 1; padding: 11px 12px; border: 2px solid #c5dcdc; border-radius: 12px; font: 400 16px "Nunito", sans-serif; }
+.formulario-chat button { padding: 0 16px; border: 0; border-radius: 12px; background: var(--amarelo); color: var(--tinta); font: 800 16px "Baloo 2", sans-serif; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .menu, .fundo-escuro, .aviso { transition: none; }
+  .digitando span { animation: none; opacity: .7; }
+}
