@@ -12,10 +12,11 @@
 <body>
 <main class="conteudo-mapa">
   <h1 class="titulo-principal">Pet shops perto de mim</h1>
-  <p>Veja pet shops, lojas de banho e tosa e veterinários perto de você. Se a posição estiver errada, é só clicar no mapa no lugar onde você está.</p>
+  <p>Veja pet shops, lojas de banho e tosa e veterinários perto de você. Sua localização fica marcada no mapa; para pesquisar outro ponto, escolha um local manualmente.</p>
 
   <div class="linha-controles">
     <button class="botao botao-localizar" id="btnLocalizar" type="button">📍 Usar minha localização</button>
+    <button class="botao botao-escolher-local" id="btnEscolherLocal" type="button" aria-pressed="false">🗺️ Escolher local no mapa</button>
     <label class="texto-distancia" for="raio">Distância
       <select class="caixa-distancia" id="raio">
         <option value="3000" selected>3 km</option>
@@ -24,6 +25,7 @@
       </select>
     </label>
   </div>
+  <p class="dica-localizacao" id="dicaLocalizacao">Clique em “Escolher local no mapa” e depois no ponto desejado para buscar serviços por perto.</p>
 
   <p class="mensagem-status" id="status" role="status" aria-live="polite"></p>
 
