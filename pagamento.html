@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagamento | PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="loja.css">
+</head>
+<body>
+<main class="pagina">
+  <h1>Forma de pagamento</h1>
+  <p class="pagina__intro">Confira seu pedido e escolha como gostaria de pagar.</p>
+  <section id="resumoPagamento" class="resumo-loja" aria-label="Resumo do pedido"></section>
+  <form id="formPagamento" class="pagamento-form">
+    <label class="pagamento-opcao">
+      <input type="radio" name="formaPagamento" value="Pix" required>
+      <span><strong>Pix</strong><small>Pagamento demonstrativo via Pix.</small></span>
+    </label>
+    <label class="pagamento-opcao">
+      <input type="radio" name="formaPagamento" value="Cartão de crédito">
+      <span><strong>Cartão de crédito</strong><small>Pagamento demonstrativo; não informe dados do cartão.</small></span>
+    </label>
+    <label class="pagamento-opcao">
+      <input type="radio" name="formaPagamento" value="Pagamento na retirada">
+      <span><strong>Pagamento na retirada</strong><small>Pague quando retirar o pedido na loja.</small></span>
+    </label>
+    <p class="nota-simulacao">Esta é uma demonstração: nenhuma cobrança real será feita e nenhum pagamento será processado.</p>
+    <div class="acoes-loja">
+      <button class="botao" type="submit">Confirmar pedido</button>
+      <a class="botao botao--claro" href="carrinho.html">Voltar ao carrinho</a>
+    </div>
+  </form>
+  <div id="resultadoPedido" aria-live="polite"></div>
+</main>
+<script src="comum.js"></script>
+<script src="catalogo.js"></script>
+<script src="pagamento.js"></script>
+</body>
+</html>

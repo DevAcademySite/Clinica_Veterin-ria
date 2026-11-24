@@ -1,0 +1,8 @@
+/* ===== agendamentos.css: só a tela de escolha do serviço ===== */
+.pagina { max-width: 1000px; margin: 0 auto; padding: 32px 16px 8px; }
+.pagina h1 { margin: 0 0 4px; font: 800 30px "Baloo 2", sans-serif; color: var(--verde); }
+.opcoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+.opcao { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 16px; text-align: center; background: var(--branco); border-radius: 16px; color: var(--tinta); text-decoration: none; border: 2px solid transparent; }
+.opcao:hover { border-color: var(--verde); }
+.opcao__icone { font-size: 48px; }
+.opcao .botao { margin-top: auto; }   
