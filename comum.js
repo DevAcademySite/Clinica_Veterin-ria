@@ -23,15 +23,9 @@ function montarLayout() {
       <button class="icone" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
       <a class="logo" href="pagina-inicial.html">🐾 PetAmigo</a>
       <div class="topo__acoes">
-<<<<<<< HEAD
         <a class="icone" href="favoritos.html" aria-label="Favoritos" style="text-decoration:none;">♡ <span class="badge" id="contFavoritos">0</span></a>
         <a class="icone" href="carrinho.html" aria-label="Carrinho" style="text-decoration:none;">🛒 <span class="badge" id="contCarrinho">0</span></a>
         <a class="icone" href="perfil.html" aria-label="Meu perfil" style="text-decoration:none;">👤</a>
-=======
-        <a class="icone" href="favoritos.html" aria-label="Favoritos">♡ <span class="badge" id="contFavoritos">0</span></a>
-        <a class="icone" href="carrinho.html" aria-label="Carrinho">🛒 <span class="badge" id="contCarrinho">0</span></a>
-        <button class="icone" aria-label="Meu perfil">👤</button>
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
       </div>
     </header>
     <div class="fundo-escuro" id="fundoEscuro"></div>
@@ -41,10 +35,7 @@ function montarLayout() {
       <a href="pagina-inicial.html#produtos">🛍️ Produtos</a>
       <a href="favoritos.html">♡ Favoritos</a>
       <a href="carrinho.html">🛒 Carrinho</a>
-<<<<<<< HEAD
       <a href="perfil.html">👤 Meu perfil</a>
-=======
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
       <a href="agendamentos.html">📅 Agendamentos</a>
       <a href="formulario.html?servico=banho-tosa">✂️ Banho e tosa</a>
       <a href="formulario.html?servico=veterinario">🩺 Veterinário</a>
@@ -58,10 +49,10 @@ function montarLayout() {
     <footer class="rodape" id="rodape"><p>🐾 PetAmigo Petshop, seg a sex 8h às 19h e sáb 8h às 16h</p></footer>
     <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
     <button class="chat-botao" id="chatBotao" aria-label="Abrir chat com a Bia">💬</button>
-    <section class="chat" id="chat" hidden aria-label="Chat de atendimento do PetAmigo">
+    <section class="chat" id="chat" hidden aria-label="Chat de atendimento">
       <header class="chat__topo">
         <span aria-hidden="true">🐾</span>
-        <div><h2 class="chat__titulo">PetAmigo Petshop</h2><p class="chat__status">Bia, assistente virtual, online</p></div>
+        <div><h2 class="chat__titulo">Bia</h2><p class="chat__status">assistente virtual online</p></div>
         <button class="icone chat__fechar" id="chatFechar" aria-label="Fechar chat">✕</button>
       </header>
       <div class="mensagens" id="mensagens" aria-live="polite"></div>
@@ -84,11 +75,7 @@ function mostrarAviso(texto, tipo) {
   aviso.textContent = texto;
   aviso.className = "aviso " + (tipo === "erro" ? "aviso--erro " : "") + "visivel";
   clearTimeout(temporizadorAviso);
-<<<<<<< HEAD
   temporizadorAviso = setTimeout(() => aviso.classList.remove("visivel"), 2500);
-=======
-  temporizadorAviso = setTimeout(() => aviso.classList.remove("visivel"), 2500);  // some depois de 2,5 s
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
 }
 
 // ---- números do carrinho e dos favoritos no cabeçalho ----
@@ -116,11 +103,7 @@ fundoEscuro.addEventListener("click", fecharMenu);
 menu.addEventListener("click", (e) => { if (e.target.tagName === "A") fecharMenu(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") fecharMenu(); });
 
-<<<<<<< HEAD
 // ---- CHATBOT: a interface fica aqui; as respostas vêm do Flask ----
-=======
-// ---- CHATBOT: a interface fica aqui; as respostas vêm do Flask (form.py) ----
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
 const chat = document.getElementById("chat");
 const listaMensagens = document.getElementById("mensagens");
 const campo = document.getElementById("campo");
@@ -148,11 +131,7 @@ async function responder(pergunta) {
   } catch (erro) {
     texto = "Não consegui falar com o servidor. Verifique se o Flask está rodando.";
   }
-<<<<<<< HEAD
   await new Promise(resolve => setTimeout(resolve, 800));
-=======
-  await new Promise(resolve => setTimeout(resolve, 800));   // efeito de "digitando"
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
   digitando.remove();
   adicionarMensagem(texto, "bot");
 }
@@ -168,7 +147,7 @@ function alternarChat(abrir) {
   chat.hidden = !abrir;
   if (abrir) {
     if (listaMensagens.children.length === 0) {
-      adicionarMensagem("Oi! Eu sou a Bia, assistente do PetAmigo Petshop. Como posso ajudar você e seu pet hoje?", "bot");
+      adicionarMensagem("Oi! Eu sou a Bia, assistente virtual online. Como posso ajudar hoje?", "bot");
     }
     campo.focus();
   }
