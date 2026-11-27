@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar | PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="loja.css">
+</head>
+<body>
+<main class="pagina">
+  <h1>Entrar</h1>
+  <p class="pagina__intro">Acesse sua conta para agendar serviços e comprar no PetAmigo Petshop.</p>
+
+  <form id="formLogin" class="pagamento-form" novalidate>
+    <div class="resumo-loja" style="max-width: 100%; margin: 0;">
+      <div style="display: grid; gap: 14px;">
+        <div>
+          <label for="loginEmail" style="display: block; font-weight: 800; margin-bottom: 6px;">E-mail</label>
+          <input id="loginEmail" name="email" type="email" required placeholder="seuemail@exemplo.com" style="width: 100%; padding: 11px 12px; border: 2px solid #c5dcdc; border-radius: 12px; font: 400 16px 'Nunito', sans-serif;">
+        </div>
+
+        <div>
+          <label for="loginSenha" style="display: block; font-weight: 800; margin-bottom: 6px;">Senha</label>
+          <input id="loginSenha" name="senha" type="password" required minlength="6" placeholder="Digite sua senha" style="width: 100%; padding: 11px 12px; border: 2px solid #c5dcdc; border-radius: 12px; font: 400 16px 'Nunito', sans-serif;">
+        </div>
+      </div>
+
+      <p id="erroLogin" style="color: var(--erro); font-weight: 800; margin: 12px 0 0;" aria-live="polite"></p>
+
+      <div class="acoes-loja">
+        <button class="botao" type="submit">Entrar</button>
+        <a class="botao botao--claro" href="cadastro.html">Cadastre-se</a>
+        <a class="botao botao--claro" href="pagina-inicial.html">Voltar ao início</a>
+      </div>
+    </div>
+  </form>
+</main>
+
+<script src="comum.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

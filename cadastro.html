@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastre-se | PetAmigo Petshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comum.css">
+<link rel="stylesheet" href="loja.css">
+</head>
+<body>
+<main class="pagina">
+  <h1>Cadastre-se</h1>
+  <p class="pagina__intro">Crie seu cadastro básico para comprar produtos e agendar serviços (como banho e tosa) no PetAmigo Petshop.</p>
+
+  <form id="formCadastro" class="pagamento-form" novalidate>
+    <div class="resumo-loja" style="max-width: 100%; margin: 0;">
+      <div style="display: grid; gap: 14px;">
+        <div>
+          <label for="cadNome" style="display: block; font-weight: 800; margin-bottom: 6px;">Nome completo</label>
+          <input id="cadNome" name="nome" type="text" required placeholder="Seu nome">
+        </div>
+
+        <div>
+          <label for="cadEmail" style="display: block; font-weight: 800; margin-bottom: 6px;">E-mail</label>
+          <input id="cadEmail" name="email" type="email" required placeholder="seuemail@exemplo.com">
+        </div>
+
+        <div>
+          <label for="cadSenha" style="display: block; font-weight: 800; margin-bottom: 6px;">Senha</label>
+          <input id="cadSenha" name="senha" type="password" required minlength="6" placeholder="Crie uma senha (mín. 6 caracteres)">
+        </div>
+
+        <div>
+          <label for="cadNascimento" style="display: block; font-weight: 800; margin-bottom: 6px;">Data de nascimento</label>
+          <input id="cadNascimento" name="nascimento" type="date" required>
+        </div>
+
+        <div>
+          <label for="cadTelefone" style="display: block; font-weight: 800; margin-bottom: 6px;">Telefone / WhatsApp (para avisos de compra e agendamento)</label>
+          <input id="cadTelefone" name="telefone" type="tel" required placeholder="(81) 99999-9999">
+        </div>
+
+        <div>
+          <label for="cadCep" style="display: block; font-weight: 800; margin-bottom: 6px;">CEP (para cálculo de entrega e lojas próximas)</label>
+          <input id="cadCep" name="cep" type="text" required placeholder="00000-000">
+        </div>
+
+        <div>
+          <label for="cadEndereco" style="display: block; font-weight: 800; margin-bottom: 6px;">Endereço (rua, número e bairro)</label>
+          <input id="cadEndereco" name="endereco" type="text" required placeholder="Rua, número e bairro">
+        </div>
+
+        <div>
+          <label for="cadPetNome" style="display: block; font-weight: 800; margin-bottom: 6px;">Nome do pet (opcional, para banho e tosa / consultas)</label>
+          <input id="cadPetNome" name="petNome" type="text" placeholder="Ex.: Mel">
+        </div>
+
+        <div>
+          <label for="cadPetPorte" style="display: block; font-weight: 800; margin-bottom: 6px;">Espécie / porte do pet</label>
+          <select id="cadPetPorte" name="petPorte" style="width: 100%; padding: 11px 12px; border: 2px solid #c5dcdc; border-radius: 12px; font: 400 16px 'Nunito', sans-serif; background: var(--branco);">
+            <option value="Cachorro pequeno">Cachorro pequeno</option>
+            <option value="Cachorro médio/grande">Cachorro médio/grande</option>
+            <option value="Gato">Gato</option>
+            <option value="Outro / Ainda não tenho">Outro / Ainda não tenho</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="erroCadastro" style="color: var(--erro); font-weight: 800; margin: 12px 0 0;" aria-live="polite"></p>
+
+      <div class="acoes-loja">
+        <button class="botao" type="submit">Cadastrar</button>
+        <a class="botao botao--claro" href="login.html">Já tenho conta (Entrar)</a>
+        <a class="botao botao--claro" href="pagina-inicial.html">Voltar ao início</a>
+      </div>
+    </div>
+  </form>
+</main>
+
+<script src="comum.js"></script>
+<script src="cadastro.js"></script>
+</body>
+</html>

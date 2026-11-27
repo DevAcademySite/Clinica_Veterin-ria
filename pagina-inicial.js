@@ -2,6 +2,7 @@
 // (menu, aviso e chat já vêm do comum.js)
 
 // Para usar foto no lugar do emoji: foto: "imagens/racao.jpg"
+<<<<<<< HEAD
 const produtos = [
   { id: 1, nome: "Ração Premium Cães Adultos 10kg", preco: 189.90, emoji: "🐕" },
   { id: 2, nome: "Ração Gatos Castrados 3kg",       preco: 79.90,  emoji: "🐈" },
@@ -10,6 +11,9 @@ const produtos = [
   { id: 5, nome: "Petisco Ossinho (pacote)",        preco: 19.90,  emoji: "🦴" },
   { id: 6, nome: "Caminha Macia Média",             preco: 119.90, emoji: "🛏️" }
 ];
+=======
+const produtos = window.PETAMIGO_PRODUTOS;
+>>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
 
 const grade = document.getElementById("grade");
 

@@ -5,4 +5,8 @@
 .opcao { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 16px; text-align: center; background: var(--branco); border-radius: 16px; color: var(--tinta); text-decoration: none; border: 2px solid transparent; }
 .opcao:hover { border-color: var(--verde); }
 .opcao__icone { font-size: 48px; }
+<<<<<<< HEAD
 .opcao .botao { margin-top: auto; }
+=======
+.opcao .botao { margin-top: auto; }   
+>>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1

@@ -1,6 +1,10 @@
 # PetAmigo Petshop
 
+<<<<<<< HEAD
 Site demonstrativo de pet shop feito com HTML, CSS, JavaScript e Flask. Inclui catálogo de produtos, carrinho, favoritos, fluxo demonstrativo de pagamento, agendamentos, mapa e chatbot.
+=======
+Site demonstrativo de pet shop feito com HTML, CSS, JavaScript e Flask. Inclui catálogo de produtos, carrinho, favoritos, agendamentos, mapa e chatbot.
+>>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
 
 ## Executar localmente
 
@@ -13,6 +17,7 @@ pip install Flask
 python app.py
 ```
 
+<<<<<<< HEAD
 ## Funcionalidades
 
 - **Catálogo de produtos:** opção de adicionar produtos ao carrinho e aos favoritos com aviso na tela e contadores no topo.
@@ -35,3 +40,22 @@ python app.py
 
 - **Localização e mapa:** em computadores sem GPS, a localização do navegador pode ser aproximada; o usuário pode clicar no mapa para marcar o ponto desejado. A busca de estabelecimentos depende da disponibilidade do servidor público da Overpass API e dos cadastros no OpenStreetMap.
 - **Ambiente demonstrativo:** carrinho, favoritos, pedidos e agendamentos são simulados no navegador, sem cobrança real ou banco de dados externo.
+=======
+Abra **http://127.0.0.1:5000** no navegador.
+
+## Funcionalidades
+
+- Catálogo com opção de adicionar produtos ao carrinho e aos favoritos.
+- Carrinho com ajuste de quantidades e resumo do pedido.
+- Seleção demonstrativa de forma de pagamento. **Não há cobrança real.**
+- Formulário de agendamento e chatbot com respostas sobre a loja.
+- Carrinho, favoritos e pedidos demonstrativos salvos no `localStorage` do navegador.
+
+## Arquivos principais
+
+- `app.py`: servidor Flask, páginas do site e rota `/chat`.
+- `pagina-inicial.html` e `pagina-inicial.js`: página inicial e catálogo.
+- `carrinho.html`, `favoritos.html` e `pagamento.html`: fluxo de compra demonstrativo.
+- `comum.js` e `comum.css`: cabeçalho, navegação e elementos compartilhados.
+# Clinica_Veterinaria
+>>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
