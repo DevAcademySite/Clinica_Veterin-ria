@@ -21,15 +21,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .logo { color: var(--branco); text-decoration: none; font: 800 22px "Baloo 2", sans-serif; }
 .topo__acoes { margin-left: auto; display: flex; gap: 4px; }
 .icone { border: 0; background: transparent; color: inherit; font-size: 22px; padding: 6px 8px; cursor: pointer; }
-<<<<<<< HEAD
-=======
 .topo__acoes a.icone { text-decoration: none; }
->>>>>>> 417e5e7de224eaa4ae83d76c838dd9e65c4637a1
 .badge { font: 800 12px "Nunito", sans-serif; background: var(--amarelo); color: var(--tinta); border-radius: 999px; padding: 1px 6px; }
 
 /* ----- menu lateral (hambúrguer) ----- */
 .menu { position: fixed; top: 0; left: 0; bottom: 0; z-index: 30; width: min(80%, 300px); background: var(--branco); display: flex; flex-direction: column; transform: translateX(-100%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
-.menu.aberto { transform: translateX(0); visibility: visible; }   /* visibility:hidden tira os links do foco do teclado quando fechado */
+.menu.aberto { transform: translateX(0); visibility: visible; }
 .menu__topo { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--verde); color: var(--branco); font: 800 20px "Baloo 2", sans-serif; }
 .menu a { padding: 14px 20px; color: var(--tinta); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--claro); }
 .menu a:hover { background: var(--claro); }
